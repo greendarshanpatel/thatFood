@@ -19,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dWD-rW-utO">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
                                 <color key="backgroundColor" red="0.98065394163131714" green="0.53774511814117432" blue="0.57461768388748169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEw-AJ-jlq">
-                                <rect key="frame" x="76" y="757" width="231" height="21"/>
+                                <rect key="frame" x="76" y="708" width="231" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="p7w-W4-kvj"/>
                                 </constraints>
@@ -44,6 +44,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="camera" id="9Kr-Ij-erR"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="dWD-rW-utO" id="cjW-jj-Q6t"/>
                         <outlet property="label" destination="aEw-AJ-jlq" id="SrT-Ri-Ub2"/>
