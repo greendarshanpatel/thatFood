@@ -23,6 +23,9 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         imagePicker.allowsEditing = false
     }
 
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage]
+    }
     @IBAction func cameraPressed(_ sender: UIBarButtonItem) {
         present(imagePicker, animated: true, completion: nil)
     }
