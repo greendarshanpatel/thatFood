@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F270336B1FF3DDB700C7DB9D /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F270336A1FF3DDB600C7DB9D /* Inceptionv3.mlmodel */; };
 		F2C9025E1FF2A9780080AC18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C9025D1FF2A9780080AC18 /* AppDelegate.swift */; };
 		F2C902601FF2A9780080AC18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C9025F1FF2A9780080AC18 /* ViewController.swift */; };
 		F2C902631FF2A9780080AC18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C902611FF2A9780080AC18 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F270336A1FF3DDB600C7DB9D /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		F2C9025A1FF2A9780080AC18 /* thatFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thatFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C9025D1FF2A9780080AC18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2C9025F1FF2A9780080AC18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				F2C902671FF2A9780080AC18 /* Assets.xcassets */,
 				F2C902691FF2A9780080AC18 /* LaunchScreen.storyboard */,
 				F2C9026C1FF2A9780080AC18 /* Info.plist */,
+				F270336A1FF3DDB600C7DB9D /* Inceptionv3.mlmodel */,
 				F2C902641FF2A9780080AC18 /* thatFood.xcdatamodeld */,
 			);
 			path = thatFood;
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2C902601FF2A9780080AC18 /* ViewController.swift in Sources */,
+				F270336B1FF3DDB700C7DB9D /* Inceptionv3.mlmodel in Sources */,
 				F2C9025E1FF2A9780080AC18 /* AppDelegate.swift in Sources */,
 				F2C902661FF2A9780080AC18 /* thatFood.xcdatamodeld in Sources */,
 			);
