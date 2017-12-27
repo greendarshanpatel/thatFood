@@ -19,6 +19,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func cameraPressed(_ sender: UIBarButtonItem) {
+    }
     
 
 }
