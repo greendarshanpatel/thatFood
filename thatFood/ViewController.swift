@@ -27,6 +27,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         if let userPickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
             imageView.image = userPickedImage
         }
+        imagePicker.dismiss(animated: true, completion: nil)
     }
     @IBAction func cameraPressed(_ sender: UIBarButtonItem) {
         present(imagePicker, animated: true, completion: nil)
