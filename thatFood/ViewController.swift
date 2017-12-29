@@ -48,7 +48,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("model failed to prossess")
             }
-            print(results)
+            self.label.text = String(describing: (results.first?.identifier)! + String(describing: results.first?.confidence))
+            print(self.label.text)
         }
         let handler = VNImageRequestHandler(ciImage: image)
         do{
