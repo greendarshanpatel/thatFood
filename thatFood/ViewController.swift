@@ -26,8 +26,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let userPickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = userPickedImage
-            guard let ciimage = CIimage(image: userPickedImage) else {
-                fatalError["couldn't convert uiimage in ciimage"]
+            guard let ciimage = CIImage(image: userPickedImage) else {
+                fatalError("couldn't convert uiimage in ciimage")
             }
             detect(image: ciimage)
         }
@@ -39,9 +39,15 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         present(imagePicker, animated: true, completion: nil)
     }
     
-    func detect(umage: CIImage){
+    func detect(image: CIImage){
         guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
-            fatalErro["loading coreml model failed!"]
+            fatalError("loading coreml model failed!")
+        }
+        
+        let request = VNCoreMLRequest(model: model){(request, Error) in
+            guard let results = request.results as? [VNClassificationObservation] else {
+                fatalError("model failed to prossess")
+            }
         }
     }
     
