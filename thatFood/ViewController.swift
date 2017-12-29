@@ -24,10 +24,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let userPickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
+        if let userPickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = userPickedImage
-            guard let ciimage = CIimage(image:userPickedImage) else {
-                fatalErro["couldn't convert uiimage in ciimage"]
+            guard let ciimage = CIimage(image: userPickedImage) else {
+                fatalError["couldn't convert uiimage in ciimage"]
             }
             detect(image: ciimage)
         }
@@ -40,7 +40,9 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     }
     
     func detect(umage: CIImage){
-        
+        guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
+            fatalErro["loading coreml model failed!"]
+        }
     }
     
 
