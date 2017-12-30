@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F258DF121FF7AAFB004F22C5 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F258DF111FF7AAFB004F22C5 /* LocalAuthentication.framework */; };
 		F270336B1FF3DDB700C7DB9D /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F270336A1FF3DDB600C7DB9D /* Inceptionv3.mlmodel */; };
 		F2C9025E1FF2A9780080AC18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C9025D1FF2A9780080AC18 /* AppDelegate.swift */; };
 		F2C902601FF2A9780080AC18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C9025F1FF2A9780080AC18 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F258DF111FF7AAFB004F22C5 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		F270336A1FF3DDB600C7DB9D /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		F2C9025A1FF2A9780080AC18 /* thatFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thatFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C9025D1FF2A9780080AC18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,17 +35,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F258DF121FF7AAFB004F22C5 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F258DF101FF7AAFA004F22C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F258DF111FF7AAFB004F22C5 /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F2C902511FF2A9780080AC18 = {
 			isa = PBXGroup;
 			children = (
 				F2C9025C1FF2A9780080AC18 /* thatFood */,
 				F2C9025B1FF2A9780080AC18 /* Products */,
+				F258DF101FF7AAFA004F22C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

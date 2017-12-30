@@ -9,6 +9,8 @@
 import UIKit
 import CoreML
 import Vision
+import LocalAuthentication
+
 
 class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
@@ -18,9 +20,12 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         imagePicker.allowsEditing = false
+        authenticateUser()
+       
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -60,6 +65,36 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         }
     }
     
-
+    func authenticateUser() {
+        let authContext : LAContext = LAContext()
+        var error: NSError?
+        
+        if authContext.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &error){
+            authContext.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Biometric Check for application", reply: {successful, error -> Void in
+                if successful{
+                    print("TouchID Yes")
+                }
+                else{
+                    print("TouchID No")
+                }
+            }
+            )
+        }
+        else{
+            authContext.evaluatePolicy(LAPolicy.deviceOwnerAuthentication, localizedReason: "Enter your Passcode", reply: {
+                successful,error in
+                if successful{
+                    print("PassCode Yes")
+                }
+                else{
+                    print("PassCode No")
+                }
+            }
+            )
+        }
+    }
+    
+    
+    
 }
 
