@@ -54,7 +54,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
                 fatalError("model failed to prossess")
             }
             self.label.text = String(describing: (results.first?.identifier)! + String(describing: results.first?.confidence))
-            print(self.label.text)
+            print(self.label.text as Any)
         }
         let handler = VNImageRequestHandler(ciImage: image)
         do{
