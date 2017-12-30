@@ -75,7 +75,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
                     print("TouchID Yes")
                 }
                 else{
-        
+                    fatalError()
                     print("TouchID No")
                 }
             }
@@ -88,6 +88,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
                     print("PassCode Yes")
                 }
                 else{
+                    fatalError()
                     print("PassCode No")
                 }
             }
