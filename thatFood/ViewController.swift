@@ -43,7 +43,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     @IBAction func cameraPressed(_ sender: UIBarButtonItem) {
         present(imagePicker, animated: true, completion: nil)
     }
-    
+    //MARK: making function that detects image data with machine learning model
+    //
     func detect(image: CIImage){
         guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
             fatalError("loading coreml model failed!")
@@ -64,7 +65,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             print(error)
         }
     }
-    
+    //MARK: making a function that authonticate user
     func authenticateUser() {
         let authContext : LAContext = LAContext()
         var error: NSError?
