@@ -75,7 +75,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
                     print("TouchID Yes")
                 }
                 else{
-                    fatalError()
+                   // this point application should get teminated
                     print("TouchID No")
                 }
             }
@@ -88,7 +88,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
                     print("PassCode Yes")
                 }
                 else{
-                    fatalError()
+                    // this point application should get teminated
                     print("PassCode No")
                 }
             }
