@@ -13,7 +13,7 @@ import LocalAuthentication
 
 
 class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
-
+    var resultToBePassed: String?
     @IBOutlet weak var imageView: UIImageView!
     let imagePicker = UIImagePickerController()
     @IBOutlet weak var label: UILabel!
@@ -54,6 +54,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("model failed to prossess")
             }
+            self.resultToBePassed = String(describing: (results.first?.identifier)!)
 //            self.label.text = String(describing: (results.first?.identifier)! + String(describing: results.first?.confidence))
 //            print(self.label.text as Any)
         }
@@ -66,6 +67,15 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         }
 //        prepare(for: mainToDetailSegue, sender: self)
 //        performSegue(withIdentifier: mainToDetailSegue, sender: self)
+    }
+    
+    //MARK: preparing for segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let goDetail: String = resultToBePassed!
+        if let destinationViewController = segue.destination as? detailViewController {
+            destinationViewController.data = goDetail
+        }
     }
     //MARK: making a function that authonticate user
     func authenticateUser() {

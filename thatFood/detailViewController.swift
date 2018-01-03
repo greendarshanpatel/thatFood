@@ -9,7 +9,7 @@
 import UIKit
 
 class detailViewController: UIViewController {
-    var result: String?
+    var data: String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
