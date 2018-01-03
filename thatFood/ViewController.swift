@@ -43,6 +43,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     @IBAction func cameraPressed(_ sender: UIBarButtonItem) {
         present(imagePicker, animated: true, completion: nil)
     }
+    
+    
+    
+    
     //MARK: making function that detects image data with machine learning model
     //
     func detect(image: CIImage){
@@ -55,6 +59,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
                 fatalError("model failed to prossess")
             }
             self.resultToBePassed = String(describing: (results.first?.identifier)!)
+             self.performSegue(withIdentifier:"mainToDetailSegue", sender: self)
 //            self.label.text = String(describing: (results.first?.identifier)! + String(describing: results.first?.confidence))
 //            print(self.label.text as Any)
         }
@@ -65,16 +70,17 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         catch{
             print(error)
         }
-//        prepare(for: mainToDetailSegue, sender: self)
-//        performSegue(withIdentifier: mainToDetailSegue, sender: self)
+       
     }
     
     //MARK: preparing for segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mainToDetailSegue"{
         let goDetail: String = resultToBePassed!
         if let destinationViewController = segue.destination as? detailViewController {
             destinationViewController.data = goDetail
+        }
         }
     }
     //MARK: making a function that authonticate user
