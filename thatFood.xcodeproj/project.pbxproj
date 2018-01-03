@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E594030C0151F633EEC91CBB /* Pods_thatFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814144699E324EF4B074FA72 /* Pods_thatFood.framework */; };
 		F258DF121FF7AAFB004F22C5 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F258DF111FF7AAFB004F22C5 /* LocalAuthentication.framework */; };
 		F270336B1FF3DDB700C7DB9D /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F270336A1FF3DDB600C7DB9D /* Inceptionv3.mlmodel */; };
+		F2BA336E1FFB9FD100B60FB7 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA336D1FFB9FD100B60FB7 /* detailViewController.swift */; };
 		F2C9025E1FF2A9780080AC18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C9025D1FF2A9780080AC18 /* AppDelegate.swift */; };
 		F2C902601FF2A9780080AC18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C9025F1FF2A9780080AC18 /* ViewController.swift */; };
 		F2C902631FF2A9780080AC18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C902611FF2A9780080AC18 /* Main.storyboard */; };
@@ -18,8 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		814144699E324EF4B074FA72 /* Pods_thatFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thatFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1F68DAF6AF0112B92BBF729 /* Pods-thatFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thatFood.release.xcconfig"; path = "Pods/Target Support Files/Pods-thatFood/Pods-thatFood.release.xcconfig"; sourceTree = "<group>"; };
+		E235AE401548CF5D4A64FAD0 /* Pods-thatFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thatFood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-thatFood/Pods-thatFood.debug.xcconfig"; sourceTree = "<group>"; };
 		F258DF111FF7AAFB004F22C5 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		F270336A1FF3DDB600C7DB9D /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		F2BA336D1FFB9FD100B60FB7 /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 		F2C9025A1FF2A9780080AC18 /* thatFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thatFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C9025D1FF2A9780080AC18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2C9025F1FF2A9780080AC18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,16 +42,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				F258DF121FF7AAFB004F22C5 /* LocalAuthentication.framework in Frameworks */,
+				E594030C0151F633EEC91CBB /* Pods_thatFood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C278F4AB5F24957735210DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E235AE401548CF5D4A64FAD0 /* Pods-thatFood.debug.xcconfig */,
+				E1F68DAF6AF0112B92BBF729 /* Pods-thatFood.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F258DF101FF7AAFA004F22C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				F258DF111FF7AAFB004F22C5 /* LocalAuthentication.framework */,
+				814144699E324EF4B074FA72 /* Pods_thatFood.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -56,6 +73,7 @@
 				F2C9025C1FF2A9780080AC18 /* thatFood */,
 				F2C9025B1FF2A9780080AC18 /* Products */,
 				F258DF101FF7AAFA004F22C5 /* Frameworks */,
+				2C278F4AB5F24957735210DE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +90,7 @@
 			children = (
 				F2C9025D1FF2A9780080AC18 /* AppDelegate.swift */,
 				F2C9025F1FF2A9780080AC18 /* ViewController.swift */,
+				F2BA336D1FFB9FD100B60FB7 /* detailViewController.swift */,
 				F2C902611FF2A9780080AC18 /* Main.storyboard */,
 				F2C902671FF2A9780080AC18 /* Assets.xcassets */,
 				F2C902691FF2A9780080AC18 /* LaunchScreen.storyboard */,
@@ -89,9 +108,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2C9026F1FF2A9790080AC18 /* Build configuration list for PBXNativeTarget "thatFood" */;
 			buildPhases = (
+				4C4301E2C396CB3D0097A6AC /* [CP] Check Pods Manifest.lock */,
 				F2C902561FF2A9780080AC18 /* Sources */,
 				F2C902571FF2A9780080AC18 /* Frameworks */,
 				F2C902581FF2A9780080AC18 /* Resources */,
+				0AAE2A338DEFB0D105CEEB0B /* [CP] Embed Pods Frameworks */,
+				A6F246111689F0BC85EF1075 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,6 +171,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0AAE2A338DEFB0D105CEEB0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-thatFood/Pods-thatFood-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thatFood/Pods-thatFood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C4301E2C396CB3D0097A6AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-thatFood-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6F246111689F0BC85EF1075 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-thatFood/Pods-thatFood-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F2C902561FF2A9780080AC18 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -157,6 +235,7 @@
 				F2C902601FF2A9780080AC18 /* ViewController.swift in Sources */,
 				F270336B1FF3DDB700C7DB9D /* Inceptionv3.mlmodel in Sources */,
 				F2C9025E1FF2A9780080AC18 /* AppDelegate.swift in Sources */,
+				F2BA336E1FFB9FD100B60FB7 /* detailViewController.swift in Sources */,
 				F2C902661FF2A9780080AC18 /* thatFood.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +371,7 @@
 		};
 		F2C902701FF2A9790080AC18 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E235AE401548CF5D4A64FAD0 /* Pods-thatFood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,6 +387,7 @@
 		};
 		F2C902711FF2A9790080AC18 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1F68DAF6AF0112B92BBF729 /* Pods-thatFood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

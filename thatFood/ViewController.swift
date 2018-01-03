@@ -54,8 +54,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("model failed to prossess")
             }
-            self.label.text = String(describing: (results.first?.identifier)! + String(describing: results.first?.confidence))
-            print(self.label.text as Any)
+//            self.label.text = String(describing: (results.first?.identifier)! + String(describing: results.first?.confidence))
+//            print(self.label.text as Any)
         }
         let handler = VNImageRequestHandler(ciImage: image)
         do{
@@ -64,6 +64,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         catch{
             print(error)
         }
+//        prepare(for: mainToDetailSegue, sender: self)
+//        performSegue(withIdentifier: mainToDetailSegue, sender: self)
     }
     //MARK: making a function that authonticate user
     func authenticateUser() {
