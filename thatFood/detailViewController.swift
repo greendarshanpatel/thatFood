@@ -14,7 +14,7 @@ class detailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(data)
+     
     }
 
     override func didReceiveMemoryWarning() {
