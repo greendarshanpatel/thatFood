@@ -1,15 +1,15 @@
 //
-//  detailViewController.swift
+//  settingsViewController.swift
 //  thatFood
 //
-//  Created by Darshan Patel on 02/01/18.
+//  Created by Darshan Patel on 06/01/18.
 //  Copyright © 2018 Darshan Patel. All rights reserved.
 //
 
 import UIKit
 
-class detailViewController: UIViewController {
-    var data: String?
+class settingsViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,20 +20,7 @@ class detailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    let wikipediaURl = "https://en.wikipedia.org/w/api.php"
     
-    let parameters : [String:String] = [
-        "format" : "json",
-        "action" : "query",
-        "prop" : "extracts",
-        "exintro" : "",
-        "explaintext" : "",
-      //  "titles" : flowerName,
-        "indexpageids" : "",
-        "redirects" : "1",
-        ]
-
 
     /*
     // MARK: - Navigation

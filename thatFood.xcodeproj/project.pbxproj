@@ -17,6 +17,7 @@
 		F2C902661FF2A9780080AC18 /* thatFood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2C902641FF2A9780080AC18 /* thatFood.xcdatamodeld */; };
 		F2C902681FF2A9780080AC18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C902671FF2A9780080AC18 /* Assets.xcassets */; };
 		F2C9026B1FF2A9780080AC18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C902691FF2A9780080AC18 /* LaunchScreen.storyboard */; };
+		F2E02935200148F300EA04BB /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E02934200148F300EA04BB /* settingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F2C902671FF2A9780080AC18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2C9026A1FF2A9780080AC18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2C9026C1FF2A9780080AC18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2E02934200148F300EA04BB /* settingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				F2C9025D1FF2A9780080AC18 /* AppDelegate.swift */,
 				F2C9025F1FF2A9780080AC18 /* ViewController.swift */,
+				F2E02934200148F300EA04BB /* settingsViewController.swift */,
 				F2BA336D1FFB9FD100B60FB7 /* detailViewController.swift */,
 				F2C902611FF2A9780080AC18 /* Main.storyboard */,
 				F2C902671FF2A9780080AC18 /* Assets.xcassets */,
@@ -237,6 +240,7 @@
 				F2C9025E1FF2A9780080AC18 /* AppDelegate.swift in Sources */,
 				F2BA336E1FFB9FD100B60FB7 /* detailViewController.swift in Sources */,
 				F2C902661FF2A9780080AC18 /* thatFood.xcdatamodeld in Sources */,
+				F2E02935200148F300EA04BB /* settingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
