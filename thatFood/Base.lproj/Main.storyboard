@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="thatFood" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,10 +33,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="2LT-IT-olN">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="9Kr-Ij-erR">
+                    <navigationItem key="navigationItem" title="Title" id="OWC-Xm-rwy">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="DGO-Ex-VC2"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="5bC-X3-yCT">
                             <connections>
-                                <action selector="cameraPressed:" destination="BYZ-38-t0r" id="Y7M-jd-o75"/>
+                                <action selector="cameraPressed:" destination="BYZ-38-t0r" id="4Bp-tv-Tg1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
