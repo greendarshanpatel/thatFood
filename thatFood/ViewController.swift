@@ -60,6 +60,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             }
             self.resultToBePassed = String(describing: (results.first?.identifier)!)
              self.performSegue(withIdentifier:"mainToDetailSegue", sender: self)
+            self.title = results.first?.identifier
 //            self.label.text = String(describing: (results.first?.identifier)! + String(describing: results.first?.confidence))
 //            print(self.label.text as Any)
         }

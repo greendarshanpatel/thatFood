@@ -34,7 +34,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="OWC-Xm-rwy">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="DGO-Ex-VC2"/>
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="DGO-Ex-VC2">
+                            <connections>
+                                <segue destination="NPL-vm-zrG" kind="show" id="hFD-c6-DIO"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="5bC-X3-yCT">
                             <connections>
                                 <action selector="cameraPressed:" destination="BYZ-38-t0r" id="4Bp-tv-Tg1"/>
@@ -50,6 +54,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="660" y="130.98591549295776"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hGQ-Gc-S4P">
+            <objects>
+                <viewController id="NPL-vm-zrG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="12B-9h-oH0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0mi-Kv-xc0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6kH-vb-jqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1438" y="-559"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="KjB-GL-8WM">
