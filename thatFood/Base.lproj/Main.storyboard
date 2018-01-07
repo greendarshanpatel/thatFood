@@ -55,20 +55,57 @@
             </objects>
             <point key="canvasLocation" x="660" y="130.98591549295776"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="hGQ-Gc-S4P">
             <objects>
-                <viewController id="NPL-vm-zrG" sceneMemberID="viewController">
+                <viewController id="NPL-vm-zrG" customClass="settingsViewController" customModule="thatFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="12B-9h-oH0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2g-il-Lad">
+                                <rect key="frame" x="44" y="101" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pp-qQ-dEI">
+                                <rect key="frame" x="44" y="160" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qV-It-Wkp">
+                                <rect key="frame" x="44" y="230" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xss-Nk-ldz">
+                                <rect key="frame" x="44" y="300" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0qV-It-Wkp" firstAttribute="leading" secondItem="Xss-Nk-ldz" secondAttribute="leading" id="8dv-Qa-wQV"/>
+                            <constraint firstItem="9pp-qQ-dEI" firstAttribute="leading" secondItem="0qV-It-Wkp" secondAttribute="leading" id="9X3-00-6g1"/>
+                            <constraint firstItem="W2g-il-Lad" firstAttribute="leading" secondItem="9pp-qQ-dEI" secondAttribute="leading" id="Imh-vB-XdJ"/>
+                            <constraint firstItem="Xss-Nk-ldz" firstAttribute="top" secondItem="0qV-It-Wkp" secondAttribute="bottom" constant="49" id="Mxl-YO-CCQ"/>
+                            <constraint firstItem="W2g-il-Lad" firstAttribute="leading" secondItem="0mi-Kv-xc0" secondAttribute="leading" constant="44" id="Nen-OC-MeR"/>
+                            <constraint firstItem="0mi-Kv-xc0" firstAttribute="trailing" secondItem="W2g-il-Lad" secondAttribute="trailing" constant="135" id="SAN-Bl-0fB"/>
+                            <constraint firstItem="W2g-il-Lad" firstAttribute="top" secondItem="0mi-Kv-xc0" secondAttribute="top" constant="37" id="Weh-S8-ena"/>
+                            <constraint firstItem="0qV-It-Wkp" firstAttribute="centerY" secondItem="12B-9h-oH0" secondAttribute="centerY" id="Xpo-5K-ecj"/>
+                            <constraint firstItem="9pp-qQ-dEI" firstAttribute="top" secondItem="W2g-il-Lad" secondAttribute="bottom" constant="38" id="kUW-Uj-zr2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0mi-Kv-xc0"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6kH-vb-jqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1438" y="-559"/>
+            <point key="canvasLocation" x="1436.25" y="-560"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="KjB-GL-8WM">
