@@ -61,7 +61,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             self.resultToBePassed = String(describing: (results.first?.identifier)!)
              self.performSegue(withIdentifier:"mainToDetailSegue", sender: self)
             self.title = results.first?.identifier.capitalized
-
+            self.requestInfo(flowerName: self.title!)
         }
         let handler = VNImageRequestHandler(ciImage: image)
         do{
@@ -74,6 +74,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     }
     
     //MARK: making http request
+    
+    func requestInfo(flowerName: String){
     let wikipediaURl = "https://en.wikipedia.org/w/api.php"
     
     let parameters : [String:String] = [
@@ -85,7 +87,15 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
          "titles" : flowerName,
         "indexpageids" : "",
         "redirects" : "1",
-        ]
+    ]
+        
+    }
+    
+    
+    
+    
+    
+    
     
     //MARK: preparing for segue
     
