@@ -60,9 +60,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             }
             self.resultToBePassed = String(describing: (results.first?.identifier)!)
              self.performSegue(withIdentifier:"mainToDetailSegue", sender: self)
-            self.title = results.first?.identifier
-//            self.label.text = String(describing: (results.first?.identifier)! + String(describing: results.first?.confidence))
-//            print(self.label.text as Any)
+            self.title = results.first?.identifier.capitalized
+
         }
         let handler = VNImageRequestHandler(ciImage: image)
         do{
@@ -74,16 +73,30 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
        
     }
     
+    //MARK: making http request
+    let wikipediaURl = "https://en.wikipedia.org/w/api.php"
+    
+    let parameters : [String:String] = [
+        "format" : "json",
+        "action" : "query",
+        "prop" : "extracts",
+        "exintro" : "",
+        "explaintext" : "",
+         "titles" : flowerName,
+        "indexpageids" : "",
+        "redirects" : "1",
+        ]
+    
     //MARK: preparing for segue
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "mainToDetailSegue"{
-        let goDetail: String = resultToBePassed!
-        if let destinationViewController = segue.destination as? detailViewController {
-            destinationViewController.data = goDetail
-        }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "mainToDetailSegue"{
+//        let goDetail: String = resultToBePassed!
+//        if let destinationViewController = segue.destination as? detailViewController {
+//            destinationViewController.data = goDetail
+//        }
+//        }
+//    }
     //MARK: making a function that authonticate user
     func authenticateUser() {
         let authContext : LAContext = LAContext()

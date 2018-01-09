@@ -12,7 +12,6 @@ class detailViewController: UIViewController {
     var data: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -21,18 +20,7 @@ class detailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    let wikipediaURl = "https://en.wikipedia.org/w/api.php"
     
-    let parameters : [String:String] = [
-        "format" : "json",
-        "action" : "query",
-        "prop" : "extracts",
-        "exintro" : "",
-        "explaintext" : "",
-      //  "titles" : flowerName,
-        "indexpageids" : "",
-        "redirects" : "1",
-        ]
 
 
     /*
