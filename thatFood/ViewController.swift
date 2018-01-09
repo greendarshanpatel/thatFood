@@ -97,6 +97,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
                 let pageid = objectDetail["query"]["pageids"][0].stringValue
                 let objectDescription = objectDetail["query"]["pages"][pageid]["extract"].stringValue
                 self.detailLabel.text = objectDescription
+                
             }
         }
         

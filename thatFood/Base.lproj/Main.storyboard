@@ -47,7 +47,6 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="OWC-Xm-rwy">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="DGO-Ex-VC2"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="5bC-X3-yCT">
                             <connections>
                                 <action selector="cameraPressed:" destination="BYZ-38-t0r" id="4Bp-tv-Tg1"/>
