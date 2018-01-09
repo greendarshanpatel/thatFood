@@ -10,6 +10,8 @@ import UIKit
 import CoreML
 import Vision
 import LocalAuthentication
+import Alamofire
+import SwiftyJSON
 
 
 class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
@@ -88,6 +90,11 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         "indexpageids" : "",
         "redirects" : "1",
     ]
+        Alamofire.request(wikipediaURl, method: .get, parameters: parameters).responseJSON { (response) in
+            if response.result.isSuccess{
+                print(response)
+            }
+        }
         
     }
     
