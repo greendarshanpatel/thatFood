@@ -92,7 +92,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     ]
         Alamofire.request(wikipediaURl, method: .get, parameters: parameters).responseJSON { (response) in
             if response.result.isSuccess{
-                print(response)
+                print(JSON(response.result.value))
             }
         }
         
