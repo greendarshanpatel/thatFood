@@ -93,7 +93,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     ]
         Alamofire.request(wikipediaURl, method: .get, parameters: parameters).responseJSON { (response) in
             if response.result.isSuccess{
-                let objectDetail = JSON(response.result.value).stringValue
+                let objectDetail = JSON(response.result.value!)
+                let pageid = objectDetail["query"]["pageids"][0].stringValue
+                let objectDescription = objectDetail["query"]["pages"][pageid]["extract"].stringValue
+                self.detailLabel.text = objectDescription
             }
         }
         
@@ -105,16 +108,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     
     
     
-    //MARK: preparing for segue
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "mainToDetailSegue"{
-//        let goDetail: String = resultToBePassed!
-//        if let destinationViewController = segue.destination as? detailViewController {
-//            destinationViewController.data = goDetail
-//        }
-//        }
-//    }
     //MARK: making a function that authonticate user
     func authenticateUser() {
         let authContext : LAContext = LAContext()
