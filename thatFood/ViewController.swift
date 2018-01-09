@@ -77,6 +77,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     
     //MARK: making http request
     
+    @IBOutlet weak var detailLabel: UILabel!
     func requestInfo(flowerName: String){
     let wikipediaURl = "https://en.wikipedia.org/w/api.php"
     
@@ -92,7 +93,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     ]
         Alamofire.request(wikipediaURl, method: .get, parameters: parameters).responseJSON { (response) in
             if response.result.isSuccess{
-                print(JSON(response.result.value))
+                let objectDetail = JSON(response.result.value).stringValue
             }
         }
         
