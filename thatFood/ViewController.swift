@@ -50,7 +50,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     
     
     
-    
+     //MARK:
     //MARK: making function that detects image data with machine learning model
     //
     func detect(image: CIImage){
@@ -76,9 +76,9 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         }
        
     }
-    
-    //MARK: making http request
-    
+     //MARK:
+    //MARK: making http request and parsing JSoN data
+   
     @IBOutlet weak var detailLabel: UILabel!
     func requestInfo(flowerName: String){
     let wikipediaURl = "https://en.wikipedia.org/w/api.php"
@@ -99,9 +99,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
                 let objectDetail = JSON(response.result.value!)
                 let pageid = objectDetail["query"]["pageids"][0].stringValue
                 let objectDescription = objectDetail["query"]["pages"][pageid]["extract"].stringValue
+                
+                let objectImageURL = objectDetail["query"]["pages"]["thumbnail"]["source"].stringValue
+                self.imageView.sd_setImage(with: URL[String: objectImageURL])
                 self.detailLabel.text = objectDescription
-                let objectImadeURL = objectDetail["query"]["pages"]["thumbnail"]["source"].stringValue
-                self.imageView.sd_setImage(with: objectImadeURL)
             }
         }
         
@@ -113,7 +114,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     
     
     
-    
+     //MARK:
     //MARK: making a function that authonticate user
     func authenticateUser() {
         let authContext : LAContext = LAContext()
