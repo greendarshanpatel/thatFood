@@ -84,7 +84,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     let parameters : [String:String] = [
         "format" : "json",
         "action" : "query",
-        "prop" : "extracts",
+        "prop" : "extracts|pageimages",
         "exintro" : "",
         "explaintext" : "",
          "titles" : flowerName,
