@@ -12,6 +12,8 @@ import Vision
 import LocalAuthentication
 import Alamofire
 import SwiftyJSON
+import SDWebImage
+
 
 
 class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
@@ -90,6 +92,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
          "titles" : flowerName,
         "indexpageids" : "",
         "redirects" : "1",
+        "pithumbsize" : "500"
     ]
         Alamofire.request(wikipediaURl, method: .get, parameters: parameters).responseJSON { (response) in
             if response.result.isSuccess{
@@ -97,6 +100,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
                 let pageid = objectDetail["query"]["pageids"][0].stringValue
                 let objectDescription = objectDetail["query"]["pages"][pageid]["extract"].stringValue
                 self.detailLabel.text = objectDescription
+                let objectImadeURL = objectDetail["query"]["pages"]["thumbnail"]["source"].stringValue
                 
             }
         }
