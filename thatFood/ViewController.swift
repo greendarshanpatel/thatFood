@@ -101,7 +101,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
                 let objectDescription = objectDetail["query"]["pages"][pageid]["extract"].stringValue
                 
                 let objectImageURL = objectDetail["query"]["pages"]["thumbnail"]["source"].stringValue
-                self.imageView.sd_setImage(with: URL[String: objectImageURL])
+                //self.imageView.sd_setImage(with: URL?[String: objectImageURL])
                 self.detailLabel.text = objectDescription
             }
         }
