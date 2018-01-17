@@ -80,6 +80,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     //MARK: making http request and parsing JSoN data
    
     @IBOutlet weak var detailLabel: UILabel!
+    
     func requestInfo(flowerName: String){
     let wikipediaURl = "https://en.wikipedia.org/w/api.php"
     
@@ -94,6 +95,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         "redirects" : "1",
         "pithumbsize" : "500"
     ]
+        
         Alamofire.request(wikipediaURl, method: .get, parameters: parameters).responseJSON { (response) in
             if response.result.isSuccess{
                 let objectDetail = JSON(response.result.value!)
