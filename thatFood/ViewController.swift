@@ -111,11 +111,6 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     }
     
     
-    
-    
-    
-    
-    
      //MARK:
     //MARK: making a function that authonticate user
     func authenticateUser() {
